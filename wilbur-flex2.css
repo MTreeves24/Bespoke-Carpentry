@@ -1,0 +1,534 @@
+/**{
+    border:0.1px solid red;
+}*/
+
+body{
+  margin: 0;
+  background-color: rgb(160,100,50);
+}
+
+element::focus{
+  outline: hidden;
+}
+
+.top-bar{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background: url(https://i.imgur.com/BzpIDCe.png);
+  background-position: 0px 5px;
+
+}
+/*.top-bar::after {
+  content: "";
+  background: url(https://i.imgur.com/BzpIDCe.png);
+  background-size: 495px;
+  background-position: 0 0;
+  height:10vh;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}*/
+
+.logopic img{
+  width: 90%;
+  max-width: 453px;
+  margin-left:10px;
+}
+
+.number img{
+  width: 90%;
+  max-width: 200px;
+  margin-top:1em;
+  margin-right: 0px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: solid 2px white;
+  background: url(https://i.imgur.com/BzpIDCe.png);
+  background-position: 0px -70px;
+}
+
+nav a{
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding:20px;
+  align-items: center;
+  text-align: center;
+  font-size: 3.3vw;
+  font-family: arial;
+  text-decoration: none;
+  color: #000;
+  text-shadow: 0px 3px 3px rgba(125,91,70,0.5);
+  text-transform: uppercase;
+}
+
+nav a:hover{
+  background-color: rgb(119,82,73);
+  color: white;
+  transition:0.5s all;
+  border-radius: 5px;
+}
+
+/*nav::after {
+  content: "";
+  background: url(https://i.imgur.com/BzpIDCe.png);
+  background-size: 495px;
+  background-position: 0 0;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}*/
+
+/********************HERO********************/
+
+#mainpic{
+  height: 100vh;
+  background:url('https://i.imgur.com/fzeNGEI.jpg') no-repeat fixed;
+  background-size: 900px;
+  background-position: -250px 50px;
+  z-index: 0;
+}
+
+
+.hero{
+  margin-top: 120px;
+  border:1px solid white;
+}
+
+.text {
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  font-family: arial;
+  font-weight: 700;
+  background-color: rgba(255,255,255,0.2);
+  padding:0px 10px 0px 10px;
+}
+
+.text h1{
+    font-size: 35px;
+    margin:0;
+    margin-bottom:13px;
+}
+.text p{
+    font-size: 25px;
+    margin:0px;
+}
+
+/********************ABOUT********************/
+.wood-background{
+  background:url(https://i.imgur.com/B8k58t2.png) center;
+}
+
+
+#section-about{
+  padding-top: 50px;
+}
+
+.headline {
+  text-transform: uppercase;
+  font-family: Arial;
+  text-align: center;
+}
+
+.headline h1{
+  font-size: 45px;
+}
+
+.headline h3{
+  font-size: 25px;
+}
+
+.about{
+  display: flex;
+  margin:0px 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+.about-text{
+  flex: 1 1 600px;
+  text-align: center;
+  margin:0px 40px;
+  align-self: center;
+}
+
+.profilepic{
+  margin-bottom: 10px;
+
+}
+
+.profilepic img{
+  max-width: 250px;
+  border-radius: 50%;
+  border:1px solid white;
+}
+
+/********************WORK********************/
+
+#section-work{
+  padding-top: 70px;
+}
+.work-headline{
+  font-family: Arial;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin:5px;
+}
+
+.work-headline h1{
+    font-size: 35px;
+}
+.work-headline h3{
+    font-size: 15px;
+}
+
+.work-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5px;
+}
+.work-item {
+  background-color: black;
+  flex:1 1 140px;
+  margin: 5px;
+  position: relative;
+  overflow: hidden;
+  max-width: 280px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.work-item * {
+  box-sizing: border-box;
+  transition: all .35s ease-in-out;
+}
+
+.work-item img {
+  width: 100%;
+  vertical-align: top;
+  border: 3px solid white;
+}
+
+
+.caption-text {
+  position: absolute;
+  top:65%;
+  left: 100%;
+  font-size: 18px;
+  color: white;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+}
+
+.caption-text {
+  color: white;
+}
+
+.work-item:hover img {
+  opacity: 0.5;
+  filter: grayscale(100%);
+  border: 3px solid black;
+}
+
+.caption-text {
+  transform: translate(0%, 0%) scale(0);
+  transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.work-item:hover .caption-text {
+  transform: translate(-100%, -100%) scale(1);
+  transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+/********************TESTIMONIALS********************/
+#section-testimonials{
+  padding: 70px 10px 30px 10px;
+}
+
+.testimonials-headline{
+    font-family: arial;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+.t-image{
+  text-align: center;
+}
+
+#section-testimonials img{
+    width: 25%;
+    margin:1%;
+    border-radius: 50%;
+    border:1px solid white;
+    margin-top:10px;
+    max-width: 200px;
+}
+
+.t-image img:hover {
+    border:solid 5px black;
+    transform: scale(1.05);
+    transition: 0.2s all ease-in-out;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px #555;
+}
+.testimonials-headline h1{
+    font-size: 35px;
+}
+.testimonials-headline h3{
+    font-size: 15px;
+}
+.testimonials-headline h4{
+  font-size: 10px;
+  text-transform: none;
+}
+
+
+q {
+    display: block;
+    quotes: "“" "”" "‘" "’";
+    font-family: "Times New Roman";
+    text-align: center;
+    font-size: 15px;
+    margin: 20px 20px 0px 20px;
+    line-height: 30px;
+}
+q:before {
+    content: open-quote;
+    font-size: 50px;
+    font-weight: 700;
+}
+q:after {
+    content: close-quote;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+i{
+    display: block;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.mark, .td{
+  display: none;
+}
+
+/********************SOCIAL********************/
+.contact{
+  background-color: #583936;
+  padding-top: 20px;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social{
+  font-family: arial;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact h1{
+  font-family: arial;
+  color: white;
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social a{
+  padding:5px;
+  text-decoration: none;
+  color: white;
+  margin:10px;
+}
+
+.social a:hover{
+  background-color: rgba(256,256,256,0.05);
+  border-radius: 10px;
+}
+
+.social img{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+
+/********************FORM********************/
+
+
+form{
+  font-family: arial;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin:0px 50px 30px 50px;
+}
+
+.name-box{
+  width: 60%;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  padding:5px 10px 5px 10px;
+
+}
+
+.email-box{
+  width: 60%;
+  border-radius: 3px;
+  padding:5px 10px 5px 10px;
+}
+
+.message-box{
+  margin: 10px 0px 10px 0px;
+  width: 90%;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 3px;
+  padding:5px 10px 5px 10px;
+}
+
+.submit{
+  width: 130px;
+  height: 30px;
+  font-weight: bold;
+  line-height: 1.71;
+  border: solid 3px white;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0);
+  color: white;
+  cursor: pointer;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+}
+.submit:hover{
+  background: rgba(0,0,0,0);
+  border:inset 1px white;
+}
+.submit:focus{
+  outline:0;
+}
+
+@media all and (min-width: 575px){
+  nav a{
+    font-size: 20px;
+  }
+  #mainpic{
+  background-size: 900px;
+  background-position: -120px 50px;
+  }
+}
+
+@media all and (min-width: 768px){
+
+  #mainpic{
+    background-size: 1200px;
+    background-position: 0px 40px;
+  }
+  .work-item{
+    min-width: 200px;
+  }
+  .caption-text{
+    font-size: 28px;
+    top:60%;
+  }
+  q{
+    font-size: 20px;
+  }
+}
+
+
+
+@media all and (min-width: 991px){
+  h1{
+    font-size: 55px;
+  }
+  h3{
+    font-size: 35px;
+  }
+  .logopic{
+    margin-right: 100px;
+  }
+  .number{
+    margin-left: 100px;
+  }
+  #mainpic{
+    background-size: 1600px;
+    background-position: 0px -150px;
+  }
+  .work-item{
+    min-width: 300px;
+  }
+  .caption-text{
+    font-size: 28px;
+  }
+}
+
+@media all and (min-width: 1155px){
+  .headline h1{
+    margin-bottom:-20px;
+  }
+    .about{
+    margin:-30px 100px 0px 100px;
+  }
+  .work-item{
+    min-width:360px;
+  }
+  .work-items{
+    margin:0px 15px;
+  }
+  .caption-text{
+    font-size: 35px;
+    top:55%;
+  }
+}
+
+@media all and (min-width: 1540px){
+  #mainpic{
+    background-size: 1900px;
+    background-position: 0px -400px;
+  }
+  .work-item{
+    min-width: 480px;
+  }
+}
+
+
+.fadein {
+  opacity: 0;
+  transition: 2s opacity;
+}
