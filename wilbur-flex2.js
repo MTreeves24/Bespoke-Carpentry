@@ -4,7 +4,7 @@ $('.nav').stickThis({
 
 //FADEIN TEXT ON PAGE LOAD//
 window.onload = function() {
-  window.setTimeout(fadein, 1000);
+  window.setTimeout(fadein, 500);
 }
 function fadein() {
   document.querySelector('.fadein').style.opacity = '1';
@@ -14,19 +14,19 @@ function fadein() {
 $(document).ready(function(){
     $(".t-image1").click(function(){
         $(".mark, .td").hide()
-        $(".natalie").fadeIn(1000);
+        $(".natalie").fadeIn(800);
     });
 });
 $(document).ready(function(){
     $(".t-image2").click(function(){
         $(".natalie, .td").hide();
-        $(".mark").fadeIn(1000);
+        $(".mark").fadeIn(800);
     });
 });
 $(document).ready(function(){
     $(".t-image3").click(function(){
         $(".mark,.natalie").hide()
-        $(".td").fadeIn(1000)
+        $(".td").fadeIn(800)
     });
 });
 
