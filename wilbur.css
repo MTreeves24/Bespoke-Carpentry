@@ -1,3 +1,7 @@
+/**{
+  border: 0.1px solid red;
+}*/
+
 body{
   margin: 0;
   background-color: rgb(160,100,50);
@@ -5,6 +9,10 @@ body{
 
 element::focus{
   outline: hidden;
+}
+
+li{
+  list-style: none;
 }
 
 .top-bar{
@@ -167,45 +175,70 @@ nav a:hover{
     font-size: 15px;
 }
 
-.work-items{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 5px;
+a { text-decoration: none; color: inherit; }
+
+
+/** reset lightbox position **/
+#lightbox-container-image-data-box {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 
-.work-item {
-  background-color: black;
-  flex:1 1 140px;
+
+/** page structure **/
+
+
+.gallery-items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding:10px;
+}
+
+
+.gallery-item{
+  flex:1 1 40%;
   margin: 5px;
   position: relative;
-  max-width: 280px;
   text-align: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
-.work-item * {
+.gallery-item * {
   box-sizing: border-box;
-  transition: all .35s ease-in-out;
+  transition: transform .35s ease-in-out;
 }
 
-.work-item img {
+.gallery-item img {
   width: 100%;
   vertical-align: top;
   border: 3px solid white;
 }
+.gallery-item:hover{
+  filter: grayscale(100%);
+}
 
 .caption-text {
   position: absolute;
-  top:70%;
+  top:60%;
   background-color: rgba(190,190,190,0.5);
   border: 0.5px solid white;
   font-size: 16px;
   color: white;
   text-shadow: 1px 1px 2px black;
   width: 100%;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 20px;
+}
+
+.view-more{
+  font-size: 0.5em;
+  margin: 0;
+}
+
+.caption-text:hover{
+  text-decoration:underline;
 }
 
 /********************TESTIMONIALS********************/
@@ -230,8 +263,8 @@ nav a:hover{
     border-radius: 50%;
     border:1px solid white;
     margin-top:10px;
-    max-width: 200px;
 }
+
 
 .t-image img:hover {
     border:solid 5px black;
@@ -240,6 +273,20 @@ nav a:hover{
     cursor: pointer;
     box-shadow: 2px 2px 5px #555;
 }
+
+.t-image1{
+  max-width: 160px;
+  filter: none;
+  border:solid 5px black;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #555;
+}
+
+.t-image2, .t-image3{
+  max-width: 130px;
+  filter: grayscale();
+}
+
 
 .testimonials-headline h1{
     font-size: 35px;
@@ -283,39 +330,53 @@ i{
   display: none;
 }
 
+.t-active{
+  max-width: 160px;
+  filter: none;
+  border:solid 5px black;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px #555;
+}
+
+.t-inactive{
+  filter: grayscale();
+  max-width: 130px;
+}
+
 /********************SOCIAL********************/
 .contact{
   background-color: #583936;
-  padding-top: 20px;
-}
-
-.flex{
+  padding: 0px 20px 20px 20px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
+.contact-headline{
+    flex:1 1 100%;
+    font-family: arial;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 45px;
+    text-align: center;
+    color: white;
+}
 .social{
+  flex:1 1 40%;
+  align-self: center;
   font-family: arial;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 
-.contact h1{
-  font-family: arial;
-  color: white;
-  text-transform: uppercase;
-  font-size: 30px;
-  text-align: center;
-  margin-top: 20px;
-}
 
 .social a{
-  padding:5px;
+  width: 20%;
+  font-size: 9px;
+  text-align: center;
   text-decoration: none;
   color: white;
-  margin:10px;
 }
 
 .social a:hover{
@@ -324,21 +385,22 @@ i{
 }
 
 .social img{
-  margin-left: auto;
-  margin-right: auto;
+  margin:0 auto;
   display: block;
 }
+
 
 /********************FORM********************/
 
 form{
+  flex:1 1 65%;
+  align-self: center;
   font-family: arial;
   font-size: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  margin:0px 50px 30px 50px;
+  margin-bottom: 20px;
 }
 
 .name-box{
@@ -395,7 +457,10 @@ form{
   }
   .caption-text{
     font-size: 20px;
-    top: 65%;
+    top: 55%;
+  }
+  .gallery-item{
+    flex:1 1 20%;
   }
 }
 
@@ -404,19 +469,26 @@ form{
     background-size: 1200px;
     background-position: 0px 40px;
   }
-  .work-item{
-    min-width: 200px;
+  .gallery-item{
+    flex:1 1 20%;
   }
   .caption-text{
     font-size: 23px;
-    top:60%;
+    height: 40px;
+    top:70%;
   }
   q{
     font-size: 20px;
   }
+  .social{
+    justify-content: center;
+  }
+  .social a{
+    font-size: 11px;
+  }
 }
 
-@media all and (min-width: 991px){
+@media all and (min-width: 965px){
   h1{
     font-size: 55px;
   }
@@ -428,44 +500,53 @@ form{
   }
   .number{
     margin-left: 100px;
-  }
-  #mainpic{
+  }  #mainpic{
     background-size: 1600px;
     background-position: 0px -150px;
   }
-
-  .work-item {
-    min-width: 300px;
-    position: relative;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  .gallery-items{
+    padding:0px 20px;
 }
+  .gallery-item {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    flex:1 1 20%;
+}
+  .social{
+    flex:1 1 15%;
+    margin-top: 25px;
+  }
+  .social a{
+    width: 100%;
+    font-size: 15px;
+  }
 
-  .caption-text {
+  form{
+    flex:1 1 75%;
+    align-items:center;
+  }
+
+/*  .caption-text {
     position: absolute;
     left: 100%;
     font-size: 26px;
     color: white;
     height: 60px;
-    line-height: 60px;
+    line-height: 40px;
     background-color: rgba(1,1,1,0);
     border: none;
-}
-
-  .work-item:hover img {
-    opacity: 0.5;
-    filter: grayscale(100%);
-    border: 3px solid black;
+    top: 65%;
 }
 
   .caption-text {
-    transform: translate(0%, 0%) scale(0);
-    transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 300ms 0ms cubic-bezier(0.6, 0, 0.735, 0.045);
 }
 
-  .work-item:hover .caption-text {
+  .gallery-item:hover .caption-text {
     transform: translate(-100%, -100%) scale(1);
     transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+  }
+}*/
 }
 
 @media all and (min-width: 1155px){
@@ -475,15 +556,17 @@ form{
     .about{
     margin:-30px 100px 0px 100px;
   }
-  .work-item{
-    min-width:360px;
-  }
-  .work-items{
-    margin:0px 15px;
+  .gallery-items{
+    margin:0px;
   }
   .caption-text{
     font-size: 35px;
-    top:55%;
+    top:65%;
+    line-height: 30px;
+    height: 60px;
+  }
+  .gallery-item{
+    margin:20px;
   }
 }
 
@@ -492,8 +575,8 @@ form{
     background-size: 1900px;
     background-position: 0px -400px;
   }
-  .work-item{
-    min-width: 480px;
+  .gallery-item{
+    min-width: 300px;
   }
 }
 
@@ -501,3 +584,5 @@ form{
   opacity: 0;
   transition: 2s opacity;
 }
+
+

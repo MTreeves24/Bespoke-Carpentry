@@ -2,6 +2,13 @@ $('.nav').stickThis({
   top:0
 });
 
+
+    lightbox.option({
+      'alwaysShowNavOnTouchDevices': true,
+      'positionFromTop': 50
+    })
+
+
 //FADEIN TEXT ON PAGE LOAD//
 window.onload = function() {
   window.setTimeout(fadein, 500);
@@ -15,20 +22,26 @@ $(document).ready(function(){
     $(".t-image1").click(function(){
         $(".mark, .td").hide()
         $(".natalie").fadeIn(800);
+        $(".t-image1").addClass("t-active")
     });
 });
 $(document).ready(function(){
     $(".t-image2").click(function(){
         $(".natalie, .td").hide();
         $(".mark").fadeIn(800);
+        $(".t-image2").addClass("t-active")
     });
 });
 $(document).ready(function(){
     $(".t-image3").click(function(){
         $(".mark,.natalie").hide()
         $(".td").fadeIn(800)
+        $(".t-image3").addClass("t-active")
     });
 });
+
+
+
 
 //SMOOTH SCROLLING//
 
