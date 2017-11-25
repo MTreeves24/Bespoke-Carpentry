@@ -3,10 +3,10 @@ $('.nav').stickThis({
 });
 
 
-    lightbox.option({
-      'alwaysShowNavOnTouchDevices': true,
-      'positionFromTop': 50
-    })
+  lightbox.option({
+    'alwaysShowNavOnTouchDevices': true,
+    'positionFromTop': 50
+  })
 
 
 //FADEIN TEXT ON PAGE LOAD//
@@ -17,26 +17,37 @@ function fadein() {
   document.querySelector('.fadein').style.opacity = '1';
 }
 
+
+
 //FADE IN TESTIMONIAL AFTER IMG CLICKED//
 $(document).ready(function(){
     $(".t-image1").click(function(){
         $(".mark, .td").hide()
         $(".natalie").fadeIn(800);
-        $(".t-image1").addClass("t-active")
+      $(this).removeClass('t-inactive');
+      $(this).addClass('t-active');
+           $(".t-image2, .t-image3").removeClass("t-active")
+        $(".t-image2, .t-image3").addClass("t-inactive")
     });
 });
 $(document).ready(function(){
     $(".t-image2").click(function(){
         $(".natalie, .td").hide();
         $(".mark").fadeIn(800);
-        $(".t-image2").addClass("t-active")
+      $(this).removeClass('t-inactive');
+      $(this).addClass('t-active');
+        $(".t-image1, .t-image3").removeClass("t-active")
+        $(".t-image1, .t-image3").addClass("t-inactive")
     });
 });
 $(document).ready(function(){
     $(".t-image3").click(function(){
         $(".mark,.natalie").hide()
         $(".td").fadeIn(800)
-        $(".t-image3").addClass("t-active")
+      $(this).removeClass('t-inactive');
+      $(this).addClass('t-active');
+        $(".t-image1, .t-image2").removeClass("t-active")
+        $(".t-image1, .t-image2").addClass("t-inactive")
     });
 });
 
@@ -72,5 +83,7 @@ $('a[href*="#"]')
     }
   });
 
-  window.sr = ScrollReveal();
-sr.reveal('#section-about,.about,#section-work,.work-item,#section-testimonials', { duration: 800,easing: 'ease-in' });
+
+//REMOVED THE BELOW DUE TO CLASHES WITH THE NAV LINKS GOING TOO FAR//
+//   window.sr = ScrollReveal();
+// sr.reveal('#section-about,.about,#section-work,.work-item,#section-testimonials', { duration: 800,easing: 'ease-in' });

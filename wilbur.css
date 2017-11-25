@@ -51,7 +51,7 @@ nav{
 nav a{
   flex-grow: 1;
   flex-shrink: 1;
-  padding:20px;
+  padding:20px 0px;
   align-items: center;
   text-align: center;
   font-size: 3.3vw;
@@ -82,7 +82,8 @@ nav a:hover{
 
 .hero{
   margin-top: 120px;
-  border:1px solid white;
+  border-top:1px solid white;
+  border-bottom: 1px solid white;
 }
 
 .text {
@@ -243,7 +244,7 @@ a { text-decoration: none; color: inherit; }
 
 /********************TESTIMONIALS********************/
 #section-testimonials{
-  padding: 70px 10px 30px 10px;
+  padding: 70px 10px 0px 10px;
 }
 
 .testimonials-headline{
@@ -258,7 +259,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 #section-testimonials img{
-    width: 25%;
+    width: 29%;
     margin:1%;
     border-radius: 50%;
     border:1px solid white;
@@ -275,7 +276,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .t-image1{
-  max-width: 160px;
+  max-width: 29%;
   filter: none;
   border:solid 5px black;
   cursor: pointer;
@@ -283,7 +284,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .t-image2, .t-image3{
-  max-width: 130px;
+  max-width: 23%;
   filter: grayscale();
 }
 
@@ -331,7 +332,7 @@ i{
 }
 
 .t-active{
-  max-width: 160px;
+  max-width: 29%;
   filter: none;
   border:solid 5px black;
   cursor: pointer;
@@ -340,11 +341,75 @@ i{
 
 .t-inactive{
   filter: grayscale();
-  max-width: 130px;
+  max-width: 23%;
 }
 
+/********************SHOP********************/
+#section-shop{
+  text-align: center;
+  padding:50px 10%;
+  padding-bottom: 80px;
+  text-transform: uppercase;
+  font-family: arial;
+}
+
+.shop-headline{
+  font-size: 35px;
+}
+
+.sold-items{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sold-item{
+  flex:1 1 100px;
+  max-width: 300px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.sold-item * {
+  box-sizing: border-box;
+  transition: transform .35s ease-in-out;
+}
+
+.sold-item img {
+  width: 100%;
+  border-radius: 20%;
+  vertical-align: top;
+  border: 3px solid white;
+}
+
+.shop-button{
+  width: 230px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1;
+  border: solid 3px white;
+  border-radius: 5px;
+  background-color: #583936;
+  color: white;
+  cursor: pointer;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+}
+
+.shop-button:hover{
+  border:inset 1px white;
+}
+.shop-button:focus{
+  outline:0;
+}
+
+
 /********************SOCIAL********************/
-.contact{
+#section-contact{
   background-color: #583936;
   padding: 0px 20px 20px 20px;
   display: flex;
@@ -369,7 +434,6 @@ i{
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 
 .social a{
   width: 20%;
@@ -447,6 +511,9 @@ form{
   outline:0;
 }
 
+
+/**********MEDIA QUERIES FOR RESPONSIVE DESIGN**********/
+
 @media all and (min-width: 575px){
   nav a{
     font-size: 20px;
@@ -461,6 +528,18 @@ form{
   }
   .gallery-item{
     flex:1 1 20%;
+  }
+  .t-image1{
+    max-width: 20%;
+  }
+  .t-image2, .t-image3{
+    max-width: 15%;
+  }
+  .t-active{
+    max-width: 20%;
+  }
+  .t-inactive{
+    max-width: 15%;
   }
 }
 
@@ -511,6 +590,18 @@ form{
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
     flex:1 1 20%;
 }
+  .t-image1{
+    max-width: 11%;
+  }
+  .t-image2, .t-image3{
+    max-width: 9%;
+  }
+  .t-active{
+    max-width: 11%;
+  }
+  .t-inactive{
+    max-width: 9%;
+  }
   .social{
     flex:1 1 15%;
     margin-top: 25px;
@@ -524,6 +615,8 @@ form{
     flex:1 1 75%;
     align-items:center;
   }
+
+/*********THE BELOW MAY BE IMPLEMENTED AT A LATER DATE**********/
 
 /*  .caption-text {
     position: absolute;
