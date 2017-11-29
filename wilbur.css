@@ -7,7 +7,7 @@ body{
   background-color: rgb(160,100,50);
 }
 
-element::focus{
+element:focus{
   outline: hidden;
 }
 
@@ -436,11 +436,12 @@ i{
 }
 
 .social a{
+  font-size: 10px;
   width: 20%;
-  font-size: 9px;
   text-align: center;
   text-decoration: none;
   color: white;
+  margin-top: 5px;
 }
 
 .social a:hover{
@@ -448,9 +449,9 @@ i{
   border-radius: 10px;
 }
 
-.social img{
-  margin:0 auto;
-  display: block;
+.social i{
+  font-size: 40px;
+  margin-bottom: 5px;
 }
 
 
@@ -609,6 +610,11 @@ form{
   .social a{
     width: 100%;
     font-size: 15px;
+    padding:10px;
+  }
+  .phone p{
+    margin-top: 5px;
+  }
   }
 
   form{
