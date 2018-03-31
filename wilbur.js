@@ -22,32 +22,42 @@ function fadein() {
 //FADE IN TESTIMONIAL AFTER IMG CLICKED//
 $(document).ready(function(){
     $(".t-image1").click(function(){
-        $(".mark, .td").hide()
+        $(".mark, .emma, .linda").hide()
         $(".natalie").fadeIn(800);
-      $(this).removeClass('t-inactive');
+      $(this).removeClass('t-inactive');4
       $(this).addClass('t-active');
-           $(".t-image2, .t-image3").removeClass("t-active")
-        $(".t-image2, .t-image3").addClass("t-inactive")
+           $(".t-image2, .t-image3, .t-image4").removeClass("t-active")
+        $(".t-image2, .t-image3, .t-image4").addClass("t-inactive")
     });
 });
 $(document).ready(function(){
     $(".t-image2").click(function(){
-        $(".natalie, .td").hide();
+        $(".natalie, .emma, .linda").hide();
         $(".mark").fadeIn(800);
       $(this).removeClass('t-inactive');
       $(this).addClass('t-active');
-        $(".t-image1, .t-image3").removeClass("t-active")
-        $(".t-image1, .t-image3").addClass("t-inactive")
+        $(".t-image1, .t-image3, .t-image4").removeClass("t-active")
+        $(".t-image1, .t-image3, t-image4").addClass("t-inactive")
     });
 });
 $(document).ready(function(){
     $(".t-image3").click(function(){
-        $(".mark,.natalie").hide()
-        $(".td").fadeIn(800)
+        $(".mark, .natalie, .linda").hide()
+        $(".emma").fadeIn(800)
       $(this).removeClass('t-inactive');
       $(this).addClass('t-active');
-        $(".t-image1, .t-image2").removeClass("t-active")
-        $(".t-image1, .t-image2").addClass("t-inactive")
+        $(".t-image1, .t-image2, .t-image4").removeClass("t-active")
+        $(".t-image1, .t-image2, .t-image4").addClass("t-inactive")
+    });
+});
+$(document).ready(function(){
+    $(".t-image4").click(function(){
+        $(".mark, .natalie, .emma").hide()
+        $(".linda").fadeIn(800)
+      $(this).removeClass('t-inactive');
+      $(this).addClass('t-active');
+        $(".t-image1, .t-image2, .t-image3").removeClass("t-active")
+        $(".t-image1, .t-image2, .t-image3").addClass("t-inactive")
     });
 });
 
@@ -69,7 +79,7 @@ $('a[href*="#"]')
       // Does a scroll target exist?
       if (target.length) {
         $('html, body').animate({
-          scrollTop: target.offset().top
+          scrollTop: target.offset().top +5
         }, 1000, function() {
           // Callback after animation
           // Must change focus!

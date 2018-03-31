@@ -7,7 +7,7 @@ body{
   background-color: rgb(160,100,50);
 }
 
-element:focus{
+element::focus{
   outline: hidden;
 }
 
@@ -22,8 +22,9 @@ li{
   align-items: center;
   width: 100%;
   height: 10vh;
-  background: url(images/background-dark.jpg);
-  background-position: 0px 0px;
+  background: url(https://i.imgur.com/BzpIDCe.png);
+  background-position: 0px 5px;
+
 }
 
 .logopic img{
@@ -43,26 +44,26 @@ nav{
   display: flex;
   justify-content: space-around;
   border-bottom: solid 2px white;
-  background: url(images/background-dark.jpg);
+  background: url(https://i.imgur.com/BzpIDCe.png);
   background-position: 0px -70px;
 }
 
 nav a{
   flex-grow: 1;
   flex-shrink: 1;
-  padding:20px 0px;
+  padding:20px;
   align-items: center;
   text-align: center;
   font-size: 3.3vw;
   font-family: arial;
   text-decoration: none;
-  color: #ddd;
-  text-shadow: 0px 3px 3px rgba(0,0,0,0.5);
+  color: #000;
+  text-shadow: 0px 3px 3px rgba(125,91,70,0.5);
   text-transform: uppercase;
 }
 
 nav a:hover{
-  background-color: rgba(119,82,73,0.5);
+  background-color: rgb(119,82,73);
   color: white;
   transition:0.5s all;
   border-radius: 5px;
@@ -73,7 +74,7 @@ nav a:hover{
 
 #mainpic{
   height: 100vh;
-  background:url('images/hero.jpg') no-repeat fixed;
+  background:url('https://i.imgur.com/fzeNGEI.jpg') no-repeat fixed;
   background-size: 900px;
   background-position: -250px 50px;
   z-index: 0;
@@ -81,8 +82,7 @@ nav a:hover{
 
 .hero{
   margin-top: 120px;
-  border-top:1px solid white;
-  border-bottom: 1px solid white;
+  border:1px solid white;
 }
 
 .text {
@@ -99,13 +99,16 @@ nav a:hover{
 .text h1{
     font-size: 35px;
     margin:0;
-    padding:10px;
+    margin-bottom:13px;
 }
-
+.text p{
+    font-size: 25px;
+    margin:0px;
+}
 
 /********************ABOUT********************/
 .wood-background{
-  background:url(images/background.png) center;
+  background:url(https://i.imgur.com/B8k58t2.png) center;
 }
 
 #section-about{
@@ -150,20 +153,18 @@ nav a:hover{
   border:1px solid white;
 }
 
-/********************Gallery********************/
+/********************WORK********************/
 
 #section-work{
   padding-top: 70px;
-  text-align:center;
-  margin:5px;
 }
-
 
 .work-headline{
   font-family: Arial;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
+  margin:5px;
 }
 
 .work-headline h1{
@@ -187,17 +188,12 @@ a { text-decoration: none; color: inherit; }
 
 /** page structure **/
 
-fieldset{
-  border:2.5px ridge;
-}
-legend{
-  color: black;
-  font-size: 35px;
-}
+
 .gallery-items{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  padding:10px;
 }
 
 
@@ -205,6 +201,7 @@ legend{
   flex:1 1 40%;
   margin: 5px;
   position: relative;
+  text-align: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
@@ -246,7 +243,7 @@ legend{
 
 /********************TESTIMONIALS********************/
 #section-testimonials{
-  padding: 70px 10px 0px 10px;
+  padding: 70px 10px 30px 10px;
 }
 
 .testimonials-headline{
@@ -261,7 +258,7 @@ legend{
 }
 
 #section-testimonials img{
-    width: 29%;
+    width: 25%;
     margin:1%;
     border-radius: 50%;
     border:1px solid white;
@@ -278,15 +275,15 @@ legend{
 }
 
 .t-image1{
-  max-width: 29%;
+  max-width: 160px;
   filter: none;
   border:solid 5px black;
   cursor: pointer;
   box-shadow: 2px 2px 5px #555;
 }
 
-.t-image2, .t-image3, .t-image4{
-  max-width: 23%;
+.t-image2, .t-image3{
+  max-width: 130px;
   filter: grayscale();
 }
 
@@ -329,12 +326,12 @@ i{
     margin-bottom: 20px;
 }
 
-.mark, .emma, .linda{
+.mark, .td{
   display: none;
 }
 
 .t-active{
-  max-width: 29%;
+  max-width: 160px;
   filter: none;
   border:solid 5px black;
   cursor: pointer;
@@ -343,75 +340,12 @@ i{
 
 .t-inactive{
   filter: grayscale();
-  max-width: 23%;
+  max-width: 130px;
 }
-
-/********************SHOP********************/
-#section-shop{
-  text-align: center;
-  padding:50px 10%;
-  padding-bottom: 80px;
-  text-transform: uppercase;
-  font-family: arial;
-}
-
-.shop-headline{
-  font-size: 35px;
-}
-
-.sold-items{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.sold-item{
-  flex:1 1 100px;
-  max-width: 300px;
-  margin: 5px;
-  text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-}
-
-.sold-item * {
-  box-sizing: border-box;
-  transition: transform .35s ease-in-out;
-}
-
-.sold-item img {
-  width: 100%;
-  vertical-align: top;
-  border: 3px solid white;
-}
-
-.shop-button{
-  width: 230px;
-  height: 50px;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 1;
-  border: solid 3px white;
-  border-radius: 5px;
-  background-color: #583936;
-  color: white;
-  cursor: pointer;
-  -o-text-overflow: clip;
-  text-overflow: clip;
-  letter-spacing: 1px;
-}
-
-.shop-button:hover{
-  border:inset 1px white;
-}
-.shop-button:focus{
-  outline:0;
-}
-
 
 /********************SOCIAL********************/
-#section-contact{
-  background:url(images/background-dark.jpg);
-  border-top: 5px solid white;
+.contact{
+  background-color: #583936;
   padding: 0px 20px 20px 20px;
   display: flex;
   justify-content: center;
@@ -436,13 +370,13 @@ i{
   justify-content: space-between;
 }
 
+
 .social a{
-  font-size: 10px;
   width: 20%;
+  font-size: 9px;
   text-align: center;
   text-decoration: none;
   color: white;
-  margin-top: 5px;
 }
 
 .social a:hover{
@@ -450,9 +384,9 @@ i{
   border-radius: 10px;
 }
 
-.social i{
-  font-size: 40px;
-  margin-bottom: 5px;
+.social img{
+  margin:0 auto;
+  display: block;
 }
 
 
@@ -513,9 +447,6 @@ form{
   outline:0;
 }
 
-
-/**********MEDIA QUERIES FOR RESPONSIVE DESIGN**********/
-
 @media all and (min-width: 575px){
   nav a{
     font-size: 20px;
@@ -531,24 +462,15 @@ form{
   .gallery-item{
     flex:1 1 20%;
   }
-  .t-image1{
-    max-width: 20%;
-  }
-  .t-image2, .t-image3, .t-image4{
-    max-width: 15%;
-  }
-  .t-active{
-    max-width: 20%;
-  }
-  .t-inactive{
-    max-width: 15%;
-  }
 }
 
 @media all and (min-width: 768px){
   #mainpic{
     background-size: 1200px;
     background-position: 0px 40px;
+  }
+  .gallery-item{
+    flex:1 1 20%;
   }
   .caption-text{
     font-size: 23px;
@@ -585,16 +507,10 @@ form{
   .gallery-items{
     padding:0px 20px;
 }
-  .interior{
-    flex:1 1 25%;
-  }
-
-  .t-active{
-    max-width: 17%;
-  }
-  .t-inactive{
-    max-width: 12%;
-  }
+  .gallery-item {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    flex:1 1 20%;
+}
   .social{
     flex:1 1 15%;
     margin-top: 25px;
@@ -602,19 +518,12 @@ form{
   .social a{
     width: 100%;
     font-size: 15px;
-    padding:10px;
-  }
-  .phone p{
-    margin-top: 5px;
-  }
   }
 
   form{
     flex:1 1 75%;
     align-items:center;
   }
-
-/*********THE BELOW MAY BE IMPLEMENTED AT A LATER DATE**********/
 
 /*  .caption-text {
     position: absolute;
@@ -638,17 +547,14 @@ form{
     transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 }*/
-
+}
 
 @media all and (min-width: 1155px){
   .headline h1{
     margin-bottom:-20px;
   }
     .about{
-    margin:-30px 6% 0px 6%;
-  }
-  #section-work{
-    padding:0px 100px;
+    margin:-30px 100px 0px 100px;
   }
   .gallery-items{
     margin:0px;
@@ -659,15 +565,8 @@ form{
     line-height: 30px;
     height: 60px;
   }
-  .gallery-items-interior{
+  .gallery-item{
     margin:20px;
-    flex:1 1 24%;
-  }
-  #section-testimonials{
-    padding:0px 200px;
-  }
-  #section-contact{
-    padding:0px 200px;
   }
 }
 
@@ -675,9 +574,6 @@ form{
   #mainpic{
     background-size: 1900px;
     background-position: 0px -400px;
-  }
-  .about{
-    margin:-30px 10% 0px 10%;
   }
   .gallery-item{
     min-width: 300px;
@@ -688,5 +584,5 @@ form{
   opacity: 0;
   transition: 2s opacity;
 }
-}
+
 
